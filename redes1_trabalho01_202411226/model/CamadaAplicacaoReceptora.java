@@ -26,7 +26,7 @@ public class CamadaAplicacaoReceptora {
 
   /*
    * ***************************************************************
-   * Metodo: rodar
+   * Metodo: CamadaDeAplicacaoReceptora
    * Funcao: executa as operacoes da camada de aplicacao da maquina receptora
    * Parametros: nenhum parametro foi definido para esta funcao
    * Retorno: void
