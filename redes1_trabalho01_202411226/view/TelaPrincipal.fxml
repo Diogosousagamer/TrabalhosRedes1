@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8.0.431" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaPrincipalController">
+   <children>
+      <ImageView fitHeight="440.0" fitWidth="661.0" layoutX="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Fundo.png" />
+         </image></ImageView>
+      <AnchorPane layoutX="16.0" layoutY="304.0" prefHeight="121.0" prefWidth="612.0" style="-fx-background-color: linear-gradient(to bottom, #dbd3d3, #bfbdbd); -fx-background-radius: 8px;">
+         <children>
+            <TextField fx:id="txtMensagem" layoutX="17.0" layoutY="12.0" prefHeight="63.0" prefWidth="442.0" promptText="Insira a mensagem a ser codificada" style="-fx-background-color: #000000; -fx-border-radius: 0px;" styleClass="txtMensagem" stylesheets="@../util/telaPrincipal.css" />
+            <Button fx:id="btnCodificar" alignment="CENTER" contentDisplay="CENTER" layoutX="477.0" layoutY="27.0" mnemonicParsing="false" onAction="#codificarMensagem" onMouseEntered="#hoverBtnCodificacao" onMouseExited="#exitBtnCodificacao" prefHeight="34.0" prefWidth="118.0" style="-fx-background-color: #cf231d; -fx-background-radius: 20px;" styleClass="btnCodificar" stylesheets="@../util/telaPrincipal.css" text="Codificar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Louize" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="34.0" layoutY="84.0" prefHeight="25.0" prefWidth="197.0" stylesheets="@../util/telaPrincipal.css" text="Opção de Codificação:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxCodificacao" layoutX="211.0" layoutY="84.0" prefHeight="25.0" prefWidth="234.0" promptText="OPÇÕES DE CODIFICAÇÃO" style="-fx-background-radius: 15px;" styleClass="codificacao" stylesheets="@../util/telaPrincipal.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="653.0" prefHeight="440.0" prefWidth="354.0" style="-fx-background-color: #1a1a1a;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="147.0" layoutY="14.0" text="Depuração" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="VCR OSD Mono" size="21.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="barraRolagem" layoutX="19.0" layoutY="198.0" prefHeight="71.0" prefWidth="316.0">
+               <content>
+                  <AnchorPane fx:id="painelSinais" prefHeight="54.0" prefWidth="490.0" style="-fx-background-color: #000000;" />
+               </content>
+            </ScrollPane>
+            <TextArea fx:id="txtDiogo" editable="false" layoutX="85.0" layoutY="52.0" prefHeight="130.0" prefWidth="234.0" style="-fx-background-radius: 8px; -fx-background-color: #fffbfb;" styleClass="caixasTexto" stylesheets="@../util/telaPrincipal.css" wrapText="true" />
+            <TextArea fx:id="txtGustavo" editable="false" layoutX="85.0" layoutY="285.0" prefHeight="130.0" prefWidth="234.0" style="-fx-background-radius: 8px; -fx-background-color: #fffbfb;" styleClass="caixasTexto" stylesheets="@../util/telaPrincipal.css" wrapText="true" />
+            <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="18.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Diogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="110.0" stylesheets="@../util/telaPrincipal.css" text="Diogo" textAlignment="CENTER" textFill="#1ad309" />
+            <ImageView fitHeight="54.0" fitWidth="52.0" layoutX="18.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Gustavo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="19.0" layoutY="352.0" stylesheets="@../util/telaPrincipal.css" text="Gustavo" textAlignment="CENTER" textFill="#d91f1f" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
