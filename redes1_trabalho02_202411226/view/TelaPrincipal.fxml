@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="660.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8.0.431" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaPrincipalController">
+   <children>
+      <ImageView fitHeight="455.0" fitWidth="682.0" layoutY="-15.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Fundo.png" />
+         </image>
+         <effect>
+            <GaussianBlur radius="4.07" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="botaoTransmitir" fitHeight="76.0" fitWidth="47.0" layoutX="279.0" layoutY="184.0" onMouseClicked="#iniciarTransmissao" onMouseEntered="#botaoTransmitirHover" onMouseExited="#botaoTransmitirExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Transmitir.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label contentDisplay="CENTER" layoutX="267.0" layoutY="242.0" text="Transmitir" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="VCR OSD Mono" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="botaoVoltar" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarTelaInicial" onMouseEntered="#botaoVoltarHover" onMouseExited="#botaoVoltarExit" prefHeight="27.0" prefWidth="26.0" style="-fx-background-color: #32a852; -fx-background-radius: 20px; -fx-padding: 10px;" text="&lt;-" textFill="WHITE">
+         <font>
+            <Font name="VCR OSD Mono" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane layoutX="74.0" layoutY="62.0" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #2acc14; -fx-background-radius: 15px;">
+         <children>
+            <Label layoutX="77.0" layoutY="9.0" text="Diogo" textFill="WHITE">
+               <font>
+                  <Font name="VCR OSD Mono" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="192.0" fitWidth="200.0" layoutX="78.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/PCDiogo.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="txtDiogo" layoutX="106.0" layoutY="136.0" prefHeight="76.0" prefWidth="136.0" promptText="Escreva uma mensagem..." wrapText="true">
+         <font>
+            <Font name="VCR OSD Mono" size="12.0" />
+         </font></TextArea>
+      <AnchorPane layoutX="387.0" layoutY="61.0" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: #a61c12; -fx-background-radius: 15px;">
+         <children>
+            <Label layoutX="67.0" layoutY="9.0" text="Gustavo" textFill="WHITE">
+               <font>
+                  <Font name="VCR OSD Mono" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="txtGustavo" layoutX="426.0" layoutY="135.0" prefHeight="80.0" prefWidth="141.0">
+         <font>
+            <Font name="VCR OSD Mono" size="12.0" />
+         </font></TextArea>
+      <ImageView fitHeight="192.0" fitWidth="200.0" layoutX="401.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/PCGustavo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="14.0" layoutY="277.0" prefHeight="148.0" prefWidth="628.0" style="-fx-background-color: #121111; -fx-background-radius: 5px;">
+         <children>
+            <Label layoutX="155.0" layoutY="14.0" text="Transmissão" textFill="WHITE">
+               <font>
+                  <Font name="VCR OSD Mono" size="16.0" />
+               </font>
+            </Label>
+            <ScrollPane fx:id="painelRolagem" layoutX="28.0" layoutY="40.0" prefHeight="94.0" prefWidth="358.0">
+               <content>
+                  <AnchorPane fx:id="painelTransmissao" prefHeight="79.0" prefWidth="361.0" style="-fx-background-color: #000000;" />
+               </content>
+            </ScrollPane>
+            <Label layoutX="458.0" layoutY="14.0" text="Depuração" textFill="WHITE">
+               <font>
+                  <Font name="VCR OSD Mono" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtDepuracao" editable="false" layoutX="400.0" layoutY="40.0" prefHeight="94.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8px;" wrapText="true">
+               <font>
+                  <Font name="VCR OSD Mono" size="12.0" />
+               </font></TextArea>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="botaoLimpar" fitHeight="76.0" fitWidth="47.0" layoutX="347.0" layoutY="184.0" onMouseClicked="#limparTransmissao" onMouseEntered="#botaoLimparHover" onMouseExited="#botaoLimparExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Limpar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label contentDisplay="CENTER" layoutX="349.0" layoutY="242.0" text="Limpar" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="VCR OSD Mono" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
